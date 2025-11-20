@@ -8,6 +8,7 @@ from database import DatabaseManager
 from email_service import EmailService
 from verification_window import VerificationWindow
 from dashboard import Dashboard
+from window_utils import center_window
 
 
 class LoginWindow:
@@ -19,6 +20,7 @@ class LoginWindow:
         self.window.title("Login")
         self.window.geometry("600x420")
         self.window.configure(bg=COLORS['white'])
+        center_window(self.window, 600, 420)
         self.setup_ui()
 
     def setup_ui(self):
@@ -130,6 +132,7 @@ class RegisterWindow:
         self.window.title("Register")
         self.window.geometry("600x500")
         self.window.configure(bg=COLORS['white'])
+        center_window(self.window, 600, 500)
         self.setup_ui()
         self.window.mainloop()
 
@@ -219,6 +222,7 @@ class RegisterWindow:
         confirm_window.geometry("450x350")
         confirm_window.configure(bg=COLORS['white'])
         confirm_window.grab_set()
+        center_window(confirm_window, 450, 350)
 
         tk.Label(
             confirm_window,
@@ -327,6 +331,7 @@ class ForgotPasswordWindow:
         self.window.title("Forgot Password")
         self.window.geometry("600x500")
         self.window.configure(bg=COLORS['white'])
+        center_window(self.window, 600, 500)
         self.setup_ui()
         self.window.mainloop()
 
